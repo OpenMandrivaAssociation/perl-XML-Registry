@@ -1,6 +1,6 @@
 %define module 	XML-Registry
 %define version 0.02
-%define release %mkrel 7
+%define release %mkrel 8
 
 Summary:	%{module} module for perl
 Name: 		perl-%{module}
@@ -17,7 +17,6 @@ Buildarch:	noarch
 %description
 %{module} - module for loading and saving an XML registry.
 
-
 %prep
 %setup -q -n %{module}-%{version}
 
@@ -25,6 +24,8 @@ Buildarch:	noarch
 
 CFLAGS="$RPM_OPT_FLAGS" %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
+
+%check
 make test
 
 %install
