@@ -11,6 +11,7 @@ License:	GPL or Artistic
 Group:		Development/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/XML/%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 Buildarch:	noarch
 
 %description
