@@ -1,6 +1,6 @@
 %define module 	XML-Registry
 %define version 0.02
-%define release %mkrel 8
+%define release %mkrel 10
 
 Summary:	%{module} module for perl
 Name: 		perl-%{module}
