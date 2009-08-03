@@ -1,24 +1,24 @@
-%define module 	XML-Registry
-%define version 0.02
-%define release %mkrel 10
+%define upstream_name 	 XML-Registry
+%define upstream_version 0.02
 
-Summary:	%{module} module for perl
-Name: 		perl-%{module}
-Version: 	%{version}
-Release: 	%{release}
-Url:		http://search.cpan.org/dist/%{module}
-License:	GPL or Artistic
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	%{upstream_name} module for perl
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/XML/%{module}-%{version}.tar.bz2
-BuildRequires:	perl-devel
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
+
 Buildarch:	noarch
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
-%{module} - module for loading and saving an XML registry.
+%{upstream_name} - module for loading and saving an XML registry.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 
@@ -40,4 +40,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README MANIFEST Changes  examples
 %{perl_vendorlib}/XML
 %{_mandir}/*/*
-
