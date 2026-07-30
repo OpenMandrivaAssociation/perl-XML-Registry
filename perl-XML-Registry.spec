@@ -2,7 +2,7 @@
 %define upstream_version 0.02
 Name:		perl-%{upstream_name}
 Version:	0.02
-Release:	2
+Release:	3
 
 Summary:	%{upstream_name} module for perl
 License:	GPL+ or Artistic
@@ -18,7 +18,7 @@ BuildArch:	noarch
 %{upstream_name} - module for loading and saving an XML registry.
 
 %prep
-%setup -q -n %{upstream_name}-%{version}
+%setup -q -n XML-Registry-0.02
 
 %build
 
